@@ -85,12 +85,6 @@
     width: 343px;
     height: 395px;
 }
-
-/* .project-section {
-    width: 343px; 
-    margin: 32px auto;
-    
-} */
 .project-image {
     margin: auto 16px;
     padding: 100px 0;
@@ -115,8 +109,8 @@
     margin-top: 32px;
 }
 
-
-/* ------------------------------------------ */
+/* Скопировал стили с Бэйз цсс */
+/* ================================================== */
 body {
     font-family: "Inter Tight", sans-serif;
     background: #1c1d20;
@@ -143,7 +137,8 @@ body {
     padding-left: 16px;
     padding-right: 16px;
 }
-
+/* ================================================== */
+/* ==================Tablet start================== */
 @media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
@@ -196,7 +191,9 @@ body {
         margin-top: 64px;
         }
 }
-/* ================================================= */
+/* ==================Tablet end================== */
+
+/* ==================Desctop start================== */
 @media screen and (min-width: 1440px) {
     .container {
         max-width: 1440px;
@@ -219,3 +216,4 @@ body {
         }
 
 }
+/* ==================Desctop end================== */
