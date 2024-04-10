@@ -14,10 +14,6 @@
     align-items: flex-start;
     margin-bottom: 32px !important;
 }
-.project-information-div {
-    padding-bottom: 32px;
-}
-
 .project-list-skils {
     display: flex;
     gap: 6px;
@@ -207,6 +203,7 @@ body {
     }
         .project-all-div {
         display: flex;
+        justify-content: space-between;
         flex-direction: row;
         }
         .project-list-skils {
@@ -220,4 +217,5 @@ body {
         .project-image {
         margin: auto 37px;
         }
+
 }
