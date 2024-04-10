@@ -1,0 +1,129 @@
+.visually-hidden {
+    display: none;
+};
+.projects-h2 {
+    color: rgba(250, 250, 250, 0.4);
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -2%;
+    text-align: left;
+    text-transform: uppercase;
+    width: 284px;
+    height: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 32px !important;
+}
+.project-information-div {
+    padding-bottom: 32px;
+}
+
+.project-list-skils {
+    display: flex;
+    gap: 6px;
+    margin: 0px 32px 96px 32px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 32px;
+}
+
+.projects-skils {
+    box-sizing: border-box;
+    border: 1px solid rgba(28, 29, 32, 0.2);
+    border-radius: 60px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 18px;
+    color: rgb(28, 29, 32);
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+}
+
+.projects-h3 {
+    color: rgb(28, 29, 32);
+    font-family: Inter Tight;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -3%;
+    text-align: left;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.project-button {
+    border-radius: 60px;
+    padding: 13px 32px;
+    width: 141px;
+    height: 45px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    background-color: rgb(237, 59, 68);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(250, 250, 250);
+    font-family: Inter Tight;
+    line-height: 19px;
+    text-align: center;
+    border: none;
+    margin-left: 32px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.project-button:hover,
+.project-button:focus {
+    background-color: rgb(224, 55, 63);
+}
+.project-photo {
+    border-radius: 0px 0px 24px 24px;
+    background: rgb(36, 37, 39);
+    width: 343px;
+    height: 395px;
+}
+
+.project-section {
+    width: 343px; 
+    margin: 32px auto;
+    
+}
+.project-image {
+    margin: auto 16px;
+    padding: 100px 0;
+}
+.project-all-div {
+    margin-top: 32px;
+    border-radius: 24px;
+    background: rgb(250, 250, 250);
+}
+.projects-arrow {
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+    padding: 14px;
+    width: 52px;
+    height: 52px;
+    color: rgb(250, 250, 250);   
+}
+.projects-arrow-list {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    gap: 12px;
+}
+body {
+    background-color: rgb(28, 29, 32);;
+}
+
+
