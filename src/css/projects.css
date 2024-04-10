@@ -1,6 +1,3 @@
-.visually-hidden {
-    display: none;
-};
 .projects-h2 {
     color: rgba(250, 250, 250, 0.4);
     font-family: Inter Tight;
@@ -93,11 +90,11 @@
     height: 395px;
 }
 
-.project-section {
+/* .project-section {
     width: 343px; 
     margin: 32px auto;
     
-}
+} */
 .project-image {
     margin: auto 16px;
     padding: 100px 0;
@@ -118,12 +115,109 @@
 .projects-arrow-list {
     justify-content: center;
     display: flex;
-    flex-direction: row;
-    height: 70px;
     gap: 12px;
+    margin-top: 32px;
 }
+
+
+/* ------------------------------------------ */
 body {
-    background-color: rgb(28, 29, 32);;
+    font-family: "Inter Tight", sans-serif;
+    background: #1c1d20;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
 
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .project-list-skils {
+        padding-top: 64px;
+        margin-left: 64px;
+        margin-bottom: 164px;
+    }
+    .projects-h3 {
+            font-size: 44px;
+            line-height: 44px;
+            margin-left: 64px;
+            width: 494px;
+    }
+    .projects-skils {
+        height: 55px;
+        padding: 18px;
+    }
+        .project-button {
+        padding: 18px 50px 18px 50px;
+        width: 177px;
+        height: 55px;
+        margin-left: 64px;
+        margin-top: 32px;
+        margin-bottom: 64px;              
+        }
+        .project-photo {
+        width: 704px;
+        height: 625px;
+        }
+        .project-image {
+        margin: auto 45px;
+        padding: 120px 0;
+        }
+        .projects-arrow {
+        width: 68px;
+        height: 68px;
+        display: flex; 
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; 
+        padding: 18px;
+        }
+        
+        .projects-arrow-list {
+        gap: 20px;
+        margin-top: 64px;
+        }
+}
+/* ================================================= */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+        .project-all-div {
+        display: flex;
+        flex-direction: row;
+        }
+        .project-list-skils {
+        margin-bottom: 223px;
+        }
+        .project-photo {
+        border-radius: 0px 24px 24px 0px;
+        width: 688px;
+        height: 625px;
+        }
+        .project-image {
+        margin: auto 37px;
+        }
+}
