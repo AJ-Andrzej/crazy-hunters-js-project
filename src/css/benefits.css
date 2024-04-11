@@ -15,6 +15,44 @@
     margin-bottom: 32px !important;
 }
 
+.benefits-all-div{
+    display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 32px;
+max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.benefits-box{
+    display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 64px;
+    border-radius: 20px;
+        padding: 24px;
+        width: 344px;
+        height: 270px;
+        background: #242527;
+        margin-top: 20px;
+}
+
+.benefits-title{
+    font: 600 20px / 1.5 "Inter Tight", sans-serif;
+        letter-spacing: -0.02em;
+        color: #fafafa;
+}
+
+.benefits-description{
+    font: 500 16px / 1.5 "Inter Tight", sans-serif;
+        letter-spacing: -0.02em;
+        color: rgba(250, 250, 250, 0.6);
+}
+
+
+
 
 /* Стилі з файлу base.css */
 
