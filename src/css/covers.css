@@ -1,0 +1,91 @@
+.content {
+  position: relative;
+
+}
+
+.content::before {
+  content: "";
+  display: block;
+  width: 350px;
+  height: 350px;
+  background-color:rgba(237, 59, 68, 0.6);
+  border-radius: 50%;
+  filter: blur(172px);
+  position: absolute;
+  top: 300px;
+  left: 30px;
+}
+.content::after {
+  content: "";
+  display: block;
+  width: 350px;
+  height: 350px;
+  background-color:rgba(237, 59, 68, 0.6);
+  border-radius: 50%;
+  filter: blur(172px);
+  position: absolute;
+  top: 0px;
+  left: 30%;
+}
+
+
+.marquee {
+  overflow: hidden;
+  z-index: 2;
+}
+.marquee__line {
+  flex-shrink: 0;
+  overflow: hidden;
+  height: 346px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  img {
+    height: 100%;
+  }
+}
+.marquee__inner {
+  display: flex;
+  transform: rotate(16deg);
+}
+
+.animate-block {
+  animation-name: marqueeLine;
+  animation-duration: 25s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marqueeLine {
+  0% {
+    transform: translateX(0);
+  }
+
+  35% {
+    transform: translateX(-55%);
+  }
+
+  65% {
+    transform: translateX(55%);
+  }
+  100% {
+    transform: translateX(0);
+
+  }
+
+}
+
+
+
+@media screen and (min-width: 375px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1440px) {
+
+
+
+}
