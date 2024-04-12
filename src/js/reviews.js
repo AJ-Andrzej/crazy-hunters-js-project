@@ -5,6 +5,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
 
 const list = document.querySelector('.reviews-main-list');
+const swiperContainer = document.querySelector('.swiper');
 
 async function getReviews() {
   const url = 'https://portfolio-js.b.goit.study/api/reviews';
@@ -39,8 +40,11 @@ async function handleReviews() {
     const review = await getReviews();
     const markup = renderReviews(review);
     list.insertAdjacentHTML('beforeend', markup);
+    const swiper = new Swiper(swiperContainer, {
+      slidesPerView: 1,
+      speed: 400,
+      preventClicks: true,
 
-    const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       navigation: {
         nextEl: '.swiper-button-next',
