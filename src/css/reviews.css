@@ -23,7 +23,6 @@ body {
 .reviews-main-list {
   display: flex;
   flex-direction: row;
-  gap: 16px;
 }
 .reviews-item {
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -84,6 +83,9 @@ body {
   width: 343px;
 }
 .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: grab;
   height: 330px !important;
 }

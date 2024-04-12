@@ -41,10 +41,26 @@ async function handleReviews() {
     const markup = renderReviews(review);
     list.insertAdjacentHTML('beforeend', markup);
     const swiper = new Swiper(swiperContainer, {
-      slidesPerView: 1,
       speed: 400,
-      preventClicks: true,
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
 
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 18,
+        },
+
+        1440: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+        },
+      },
       direction: 'horizontal',
       navigation: {
         nextEl: '.swiper-button-next',
