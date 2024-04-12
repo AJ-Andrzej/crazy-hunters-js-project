@@ -1,0 +1,136 @@
+.faq-section {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 343px;
+}
+
+.faq-title {
+  margin: 0 16px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #fafafa33;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa66;
+}
+
+.faq-column {
+  margin: 0 16px;
+}
+
+.faq-question {
+  padding: 20px 0;
+  border-bottom: 1px solid #fafafa33;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.faq-question-title {
+  max-width: 241px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.faq-accordion {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  padding: 7px;
+  border: 1px solid #fafafa33;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #fafafa;
+}
+
+.faq-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #fafafa;
+  opacity: 100%;
+}
+
+.faq-arrow.rotate {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.faq-question-description {
+  display: block;
+  opacity: 60%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .faq-section {
+    max-width: 704px;
+  }
+  .faq-question {
+    gap: 26px;
+    padding: 32px 0 24px 0;
+    border-bottom: 1px solid #fafafa33;
+    border-top: 0;
+  }
+
+  .faq-title {
+    max-width: 574px;
+  }
+
+  .faq-question-description {
+    max-width: 656px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .faq-section {
+    max-width: 1376px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .faq-column {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .faq-question {
+    width: 50%;
+  }
+
+  .faq-question:nth-child(odd) {
+    padding-right: 32px;
+    border-right: 1px solid #fafafa33;
+  }
+
+  .faq-question:nth-child(even) {
+    padding-left: 32px;
+  }
+
+  .faq-question:nth-child(n + 4) {
+    margin-top: 0;
+  }
+
+  .faq-accordion {
+    top: 32px;
+    right: 32px;
+  }
+}
