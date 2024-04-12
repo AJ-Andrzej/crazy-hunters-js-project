@@ -3,20 +3,22 @@ import 'swiper/css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import axios from 'axios';
+import { getReviews } from './api';
 
 const list = document.querySelector('.reviews-main-list');
+const swiperContainer = document.querySelector('.swiper');
 
-async function getReviews() {
-  const url = 'https://portfolio-js.b.goit.study/api/reviews';
+// async function getReviews() {
+//   const url = 'https://portfolio-js.b.goit.study/api/reviews';
 
-  try {
-    const res = await axios.get(url);
-    return res.data;
-  } catch (err) {
-    console.error('Error occurred while fetching reviews:', error);
-    throw error;
-  }
-}
+//   try {
+//     const res = await axios.get(url);
+//     return res.data;
+//   } catch (err) {
+//     console.error('Error occurred while fetching reviews:', error);
+//     throw error;
+//   }
+// }
 function renderReview({ avatar_url, author, review }) {
   return `<li class="reviews-item swiper-slide">
             
@@ -39,8 +41,25 @@ async function handleReviews() {
     const review = await getReviews();
     const markup = renderReviews(review);
     list.insertAdjacentHTML('beforeend', markup);
+    const swiper = new Swiper(swiperContainer, {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+      },
 
-    const swiper = new Swiper('.swiper', {
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 18,
+        },
+
+        1440: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+        },
+      },
       direction: 'horizontal',
       navigation: {
         nextEl: '.swiper-button-next',
@@ -60,7 +79,3 @@ async function handleReviews() {
     });
   }
 }
-
-const buttonPrev = document.querySelector('swiper-button-prev');
-buttonPrev.addEventListener('click', handleClickPrev);
-function handleClickPrev() {}

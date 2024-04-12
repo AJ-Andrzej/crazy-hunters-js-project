@@ -1,14 +1,6 @@
-body {
-  background-color: #1c1d20;
-}
-
 .reviews-section {
-  padding: 20px 16px;
-}
-
-.reviews-wrapper {
-  max-width: 355px;
-  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .reviews-title {
@@ -23,7 +15,6 @@ body {
 .reviews-main-list {
   display: flex;
   flex-direction: row;
-  gap: 16px;
 }
 .reviews-item {
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -59,6 +50,8 @@ body {
   display: flex;
   gap: 12px;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .reviews-btn-swiper {
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -68,25 +61,51 @@ body {
   width: 52px;
   height: 52px;
   background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #fbfbfb;
+  cursor: pointer;
 }
 .reviews-is-active-btn {
   border: 1px solid rgba(250, 250, 250, 0.5);
 }
+
+.reviews-icon {
+  width: 24px;
+  height: 24px;
+}
+.reviews-icon-left {
+  transform: rotate(180deg);
+}
+
 .swiper {
   width: 343px;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  height: 330px !important;
 }
 
 @media screen and (min-width: 768px) {
   .reviews-section {
-    padding: 40px 32px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
-  .reviews-wrapper {
-    max-width: 736px;
-  }
+
   .reviews-btn-swiper {
     width: 68px;
     height: 68px;
   }
+
+  .reviews-icon {
+    width: 32px;
+    height: 32px;
+  }
+
   .swiper {
     width: 704px;
   }
@@ -94,11 +113,10 @@ body {
 
 @media screen and (min-width: 1440px) {
   .reviews-section {
-    padding: 164px 32px;
+    padding-top: 164px;
+    padding-bottom: 164px;
   }
-  .reviews-wrapper {
-    max-width: 1376px;
-  }
+
   .reviews-item {
     max-width: 332px;
     height: 326px;
@@ -106,6 +124,12 @@ body {
   .reviews-btn-wrapper {
     gap: 20px;
   }
+
+  .reviews-icon {
+    width: 32px;
+    height: 32px;
+  }
+
   .swiper {
     width: 1376px;
   }

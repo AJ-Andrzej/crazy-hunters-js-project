@@ -1,22 +1,32 @@
 <section class="reviews-section">
-  <div class="reviews-wrapper">
+  <div class="reviews-wrapper container">
     <h2 class="reviews-title">REVIEWS</h2>
-    <!-- Slider main container -->
+
     <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <ul class="reviews-main-list"></ul>
-      </div>
-
-      <!-- If we need navigation buttons -->
-      <div class="reviews-btn-wrapper">
-        <button class="reviews-btn-swiper swiper-button-prev"></button>
-
-        <button
-          class="reviews-btn-swiper reviews-is-active-btn swiper-button-next"
-        ></button>
-      </div>
-    </div>
+      
+        <ul class="reviews-main-list swiper-wrapper"></ul>
+      
+      
+        <ul class="reviews-btn-wrapper">
+        <li class="reviews-btn-swiper swiper-button-prev">
+          <svg
+            class="reviews-icon reviews-icon-left"
+            
+            
+          >
+            <use  href="../img/icons.svg#icon-arrow-right"></use>
+          </svg>
+        </li>
+        <li class="reviews-btn-swiper reviews-is-active-btn swiper-button-next">
+          <svg
+            class="reviews-icon reviews-icon-right"
+            
+            
+          >
+            <use href="../img/icons.svg#icon-arrow-right"></use>
+          </svg>
+        </li>
+      </ul>
+    
   </div>
 </section>
