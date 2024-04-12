@@ -19,7 +19,7 @@
     <script type="module" crossorigin src="/crazy-hunters-js-project/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/crazy-hunters-js-project/assets/vendor-8d3997b6.js">
     <link rel="stylesheet" href="/crazy-hunters-js-project/assets/vendor-ed6a6904.css">
-    <link rel="stylesheet" href="/crazy-hunters-js-project/assets/index-21f23b98.css">
+    <link rel="stylesheet" href="/crazy-hunters-js-project/assets/index-ca6a846a.css">
   </head>
 
   <body>
@@ -302,28 +302,37 @@
 </section>
 
       <section class="reviews-section">
-  <div class="reviews-wrapper">
+  <div class="reviews-wrapper container">
     <h2 class="reviews-title">REVIEWS</h2>
-    <!-- Slider main container -->
+
     <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <ul class="reviews-main-list"></ul>
-      </div>
-
-      <!-- If we need navigation buttons -->
-      <div class="reviews-btn-wrapper">
-        <button class="reviews-btn-swiper swiper-button-prev"></button>
-
-        <button
-          class="reviews-btn-swiper reviews-is-active-btn swiper-button-next"
-        ></button>
-      </div>
-    </div>
+      
+        <ul class="reviews-main-list swiper-wrapper"></ul>
+      
+      
+        <ul class="reviews-btn-wrapper">
+        <li class="reviews-btn-swiper swiper-button-prev">
+          <svg
+            class="reviews-icon reviews-icon-left"
+            
+            
+          >
+            <use  href="../img/icons.svg#icon-arrow-right"></use>
+          </svg>
+        </li>
+        <li class="reviews-btn-swiper reviews-is-active-btn swiper-button-next">
+          <svg
+            class="reviews-icon reviews-icon-right"
+            
+            
+          >
+            <use href="../img/icons.svg#icon-arrow-right"></use>
+          </svg>
+        </li>
+      </ul>
+    
   </div>
 </section>
-
     </main>
 
     <!-- Footer content -->
