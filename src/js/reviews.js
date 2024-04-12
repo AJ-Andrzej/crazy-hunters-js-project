@@ -60,7 +60,3 @@ async function handleReviews() {
     });
   }
 }
-
-const buttonPrev = document.querySelector('swiper-button-prev');
-buttonPrev.addEventListener('click', handleClickPrev);
-function handleClickPrev() {}
