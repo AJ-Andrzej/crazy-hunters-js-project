@@ -17,7 +17,9 @@
     />
     
     <script type="module" crossorigin src="/crazy-hunters-js-project/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/crazy-hunters-js-project/assets/index-6392ef99.css">
+    <link rel="modulepreload" crossorigin href="/crazy-hunters-js-project/assets/vendor-308e1e42.js">
+    <link rel="stylesheet" href="/crazy-hunters-js-project/assets/vendor-7c8ef494.css">
+    <link rel="stylesheet" href="/crazy-hunters-js-project/assets/index-17476730.css">
   </head>
 
   <body>
@@ -83,55 +85,160 @@
       <h3 class="projects-h3">
         Programming Across Borders: Ideas, Technologies, Innovations
       </h3>
-      <button class="project-button" type="button">See project</button>
+      <a
+        class="project-button"
+        href="https://github.com/AJ-Andrzej/crazy-hunters-js-project"
+        target="_blank"
+        >See project</a
+      >
     </div>
     <div class="project-photo">
-      <picture>
-        <source
-          srcset="
-            ../img/project-image-one-tablet.jpg    1x,
-            ../img/project-image-one-tablet@2x.jpg 2x
-          "
-          media="(min-width: 768px)"
-        />
-        <source
-          srcset="
-            ../img/project-image-one-mobile@2x.jpg 2x
-          "
-          media="(max-width: 767px)"
-        />
-        <img
-          class="project-image"
-          src="../img/project-image-one-mobile.jpg"
-          alt="project-photo"
-        />
-      </picture>
+      <ul class="swiper-container">
+        <li class="swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ../img/project-image-one-tablet.jpg    1x,
+                ../img/project-image-one-tablet@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../img/project-image-one-mobile@2x.jpg 2x"
+              media="(max-width: 767px)"
+            />
+            <img
+              class="project-image"
+              src="../img/project-image-one-mobile.jpg"
+              alt="project-photo"
+            />
+          </picture>
+        </li>
+        <li class="swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ../img/project-image-two-tablet.jpg    1x,
+                ../img/project-image-two-tablet@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../img/project-image-two-mobile@2x.jpg 2x"
+              media="(max-width: 767px)"
+            />
+            <img
+              class="project-image"
+              src="../img/project-image-two-mobile.jpg"
+              alt="project-photo"
+            />
+          </picture>
+        </li>
+        <li class="swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ../img/project-image-one-tablet.jpg    1x,
+                ../img/project-image-one-tablet@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../img/project-image-one-mobile@2x.jpg 2x"
+              media="(max-width: 767px)"
+            />
+            <img
+              class="project-image"
+              src="../img/project-image-one-mobile.jpg"
+              alt="project-photo"
+            />
+          </picture>
+        </li>
+      </ul>
     </div>
   </div>
   <ul class="projects-arrow-list">
-    <li><span class="projects-arrow">H</li>
-    <li><span class="projects-arrow">=></span></li>
+    <li class="swiper-button-prev">
+      <svg class="projects-arrow transform" aria-label="icon-arrow-left">
+        <use href="../img/icons.svg#icon-arrow-right"></use>
+      </svg>
+    </li>
+    <li class="swiper-button-next">
+      <svg class="projects-arrow" aria-label="icon-arrow-right">
+        <use href="../img/icons.svg#icon-arrow-right"></use>
+      </svg>
+    </li>
   </ul>
-  <div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <!-- <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div> -->
-    ...
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-</div>
 </section>
+<!-- <div class="swiper mySwiper">
+  <div class="project-photo swiper-wrapper">
+    <ul class="swiper-container">
+      <li class="swiper-slide">
+        <picture>
+          <source
+            srcset="
+              ../img/project-image-one-tablet.jpg    1x,
+              ../img/project-image-one-tablet@2x.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="../img/project-image-one-mobile@2x.jpg 2x"
+            media="(max-width: 767px)"
+          />
+          <img
+            class="project-image"
+            src="../img/project-image-one-mobile.jpg"
+            alt="project-photo"
+          />
+        </picture>
+      </li>
+      <li class="swiper-slide">
+        <picture>
+          <source
+            srcset="
+              ../img/project-image-two-tablet.jpg    1x,
+              ../img/project-image-two-tablet@2x.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="../img/project-image-two-mobile@2x.jpg 2x"
+            media="(max-width: 767px)"
+          />
+          <img
+            class="project-image"
+            src="../img/project-image-two-mobile.jpg"
+            alt="project-photo"
+          />
+        </picture>
+      </li>
+      <li class="swiper-slide">
+        <picture>
+          <source
+            srcset="
+              ../img/project-image-one-tablet.jpg    1x,
+              ../img/project-image-one-tablet@2x.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="../img/project-image-one-mobile@2x.jpg 2x"
+            media="(max-width: 767px)"
+          />
+          <img
+            class="project-image"
+            src="../img/project-image-one-mobile.jpg"
+            alt="project-photo"
+          />
+        </picture>
+      </li>
+    </ul>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div> -->
 
       
       <section class="covers">
