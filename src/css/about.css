@@ -37,9 +37,18 @@
 }
 
 .about-education-list{
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    padding-bottom: 20px;
     margin-bottom: 20px;
 }
 
+.about-education-container {
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
 .about-education-title{
     font-weight: 600;
     font-size: 16px;
@@ -47,9 +56,19 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: rgba(250, 250, 250, 0.4);
-
-    margin-bottom: 12px;
 }
+
+.about-accordion {
+    top: 20px;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    padding: 7px;
+    border: 1px solid #fafafa33;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #fafafa;
+  }
 
 .about-education-text {
     display: flex;
@@ -75,37 +94,32 @@
     gap: 10px;
 }
 
-
 .about-skills {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 0px;
+    align-items: center;
     overflow: hidden;
     padding-top: 12px;
     margin-bottom: 64px;
 }
 
 .about-skills-list {
+    display: block;
     min-width: 130px;
     min-height: 130px;
-    border-radius: 100%;
-    border: 1px solid #fafafa;
-    font-weight: 500;
-    font-size: 20px;
-    letter-spacing: -0.02em;
+    border-radius: 50%;
+    border: 1px solid rgba(250, 250, 250, 0.2);
 }
-
 .skills-list-item {
-    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+    min-height: 130px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.02em;
     color: #fafafa;
-    margin-top: 50px;
-    margin-left: 20px;
 }
 
 /* =========about-mobile-style=========== */
@@ -132,9 +146,10 @@
     }
 
     .about-education-list{
+        padding-bottom: 32px;
         margin-bottom: 32px;
     }
-    
+
     .about-skills {
         padding-top: 32px;
         margin-bottom: 96px;
@@ -146,10 +161,13 @@
     }
 
     .skills-list-item {
-        width: 120px;
+        min-width: 200px;
+        min-height: 200px;
+        font-weight: 500;
         font-size: 20px;
-        margin-top: 88px;
-        margin-left: 50px;
+        line-height: 1.5;
+        letter-spacing: -0.02em;
+        color: #fafafa;
     }
 }
 /* =========about-tablet-style=========== */
@@ -173,6 +191,9 @@
     }
 
     .about-education-list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
         margin-bottom: 48px;
     }
 
