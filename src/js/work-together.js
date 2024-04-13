@@ -41,4 +41,3 @@ document.addEventListener("keydown", function (event) {
 function closeModal() {
   modal.classList.add("is-hidden");
 }
-  
