@@ -1,4 +1,4 @@
-.projects-h2 {
+/* .projects-h2 {
     color: rgba(250, 250, 250, 0.4);
     font-family: Inter Tight;
     font-size: 16px;
@@ -107,11 +107,11 @@
     display: flex;
     gap: 12px;
     margin-top: 32px;
-}
+} */
 
 /* Скопировал стили с Бэйз цсс */
 /* ================================================== */
-body {
+/* body {
     font-family: "Inter Tight", sans-serif;
     background: #1c1d20;
 }
@@ -136,10 +136,10 @@ body {
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
-}
+} */
 /* ================================================== */
 /* ==================Tablet start================== */
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
         padding-left: 32px;
@@ -189,12 +189,12 @@ body {
         .projects-arrow-list {
         gap: 20px;
         margin-top: 64px;
-        }
-}
+        } */
+/* } */
 /* ==================Tablet end================== */
 
 /* ==================Desctop start================== */
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
     .container {
         max-width: 1440px;
     }
@@ -213,7 +213,7 @@ body {
         }
         .project-image {
         margin: auto 37px;
-        }
+        } */
 
-}
+/* } */
 /* ==================Desctop end================== */
