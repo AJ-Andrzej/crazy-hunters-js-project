@@ -6,7 +6,6 @@ export async function getReviews() {
     const END_POINT = '/reviews';
     const url = `${BASE_ERL}${END_POINT}`;
     const res = await axios.get(url)
-    console.log(res.data);
     return res.data
 }
 
