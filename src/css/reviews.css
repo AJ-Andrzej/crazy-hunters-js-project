@@ -1,0 +1,141 @@
+.reviews-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.reviews-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+.reviews-main-list {
+  display: flex;
+  flex-direction: row;
+}
+.reviews-item {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+  max-width: 343px;
+  height: 302px;
+  margin-bottom: 32px;
+}
+
+.reviews-avatar {
+  border-radius: 10px;
+  margin-bottom: 32px;
+}
+.reviews-item-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  margin-bottom: 8px;
+}
+.reviews-item-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+.reviews-btn-wrapper {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.reviews-btn-swiper {
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  stroke: #fafafa;
+  margin-top: 32px;
+  border-radius: 60px;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+.swiper-button-disabled {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  stroke: #3b3b3b;
+}
+
+.reviews-icon {
+  width: 24px;
+  height: 24px;
+}
+.reviews-icon-left {
+  transform: rotate(180deg);
+}
+
+.swiper {
+  width: 343px;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  height: 330px !important;
+}
+
+.reviews-item-error {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 302px;
+}
+.reviews-text-error {
+  color: white;
+  font-size: 25px;
+}
+@media screen and (min-width: 768px) {
+  .reviews-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .reviews-btn-swiper {
+    width: 68px;
+    height: 68px;
+  }
+
+  .reviews-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .swiper {
+    width: 704px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .reviews-section {
+    padding-top: 164px;
+    padding-bottom: 164px;
+  }
+
+  .reviews-item {
+    max-width: 332px;
+    height: 326px;
+  }
+  .reviews-btn-wrapper {
+    gap: 20px;
+  }
+
+  .swiper {
+    width: 1376px;
+  }
+}
