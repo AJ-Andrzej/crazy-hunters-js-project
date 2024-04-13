@@ -18,7 +18,8 @@ const modal = document.querySelector(".footer-modal");
       }
       const post = await postRequest(req)
       try{
-          showModal();
+        showModal();
+        form.reset()
       } catch {
         console.log(err);
       }
