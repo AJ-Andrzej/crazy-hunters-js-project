@@ -1,17 +1,29 @@
+import { postRequest } from './api';
 const modal = document.querySelector(".footer-modal");
 
-document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("cooperation-comment-form");
   const emailInput = document.getElementById("email");
   const commentInput = document.getElementById("comment");
-  const sendButton = document.querySelector(".footer-btn-form");
-  const modal = document.querySelector(".footer-modal");
+  
 
-  sendButton.addEventListener("click", function (event) {
+  form.addEventListener("submit", async function (event) {
     event.preventDefault();
 
     if (validateEmail(emailInput.value) && commentInput.value.trim() !== "") {
-      showModal();
+      const emailInputValue = form.elements.email.value;
+      const commentInputValue = form.elements.comment.value;
+      const req = {
+    email: emailInputValue,
+    comment: commentInputValue
+      }
+      const post = await postRequest(req)
+      try{
+          showModal();
+      } catch {
+        console.log(err);
+      }
+      
+      
     }
   });
 
@@ -21,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
  
   function showModal() {
-    modal.classList.remove("is-hidden");
-  }
-});
+    modal.classList.remove("visually-hidden");
+    const close = setTimeout (() => modal.classList.add("visually-hidden"), 5000)
+  };
 
 const closeBtn = document.querySelector(".footer-close-btn");
 const modalBackdrop = document.querySelector(".footer-modal");
@@ -39,5 +51,6 @@ document.addEventListener("keydown", function (event) {
   }
 });
 function closeModal() {
-  modal.classList.add("is-hidden");
+  modal.classList.add("visually-hidde");
 }
+  
