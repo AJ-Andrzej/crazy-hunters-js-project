@@ -4,7 +4,6 @@
 }
 
 .reviews-title {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -30,7 +29,6 @@
   margin-bottom: 32px;
 }
 .reviews-item-title {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
@@ -39,7 +37,6 @@
   margin-bottom: 8px;
 }
 .reviews-item-text {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -54,7 +51,8 @@
   flex-direction: row;
 }
 .reviews-btn-swiper {
-  border: 1px solid rgba(250, 250, 250, 0.2);
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  stroke: #fafafa;
   margin-top: 32px;
   border-radius: 60px;
   padding: 14px;
@@ -64,11 +62,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: #fbfbfb;
+
   cursor: pointer;
 }
-.reviews-is-active-btn {
-  border: 1px solid rgba(250, 250, 250, 0.5);
+.swiper-button-disabled {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  stroke: #3b3b3b;
 }
 
 .reviews-icon {
@@ -90,6 +89,17 @@
   height: 330px !important;
 }
 
+.reviews-item-error {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 302px;
+}
+.reviews-text-error {
+  color: white;
+  font-size: 25px;
+}
 @media screen and (min-width: 768px) {
   .reviews-section {
     padding-top: 40px;
@@ -123,11 +133,6 @@
   }
   .reviews-btn-wrapper {
     gap: 20px;
-  }
-
-  .reviews-icon {
-    width: 32px;
-    height: 32px;
   }
 
   .swiper {
