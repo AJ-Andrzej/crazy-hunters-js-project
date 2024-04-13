@@ -1,4 +1,5 @@
 <section class="about-section container" id="about">
+    <h2 class="visually-hidden">About me</h2>
     <div class="about-wraper">
         <div class="about-discription">
             <h2 class="about-discription-title">
@@ -20,7 +21,7 @@
             ../img/About-me/About-me-mobile.png    1x,
             ../img/About-me/About-me-mobile@2x.png 2x"
             media="(max-width: 767px)"/>
-            <img class="about-discription-img" src="../img/About-me/About-me-mobile.png" alt="">
+            <img class="about-discription-img" src="../img/About-me/About-me-mobile.png" alt="image-foto">
         </picture>
     </div>
     <ul class="about-education">
@@ -28,10 +29,10 @@
             <div class="about-education-container">
                 <h3 class="about-education-title">Aboute me</h3>
                 <button type="button" class="about-accordion">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 7.5L10 12.5L5 7.5" stroke="#FAFAFA" stroke-width="2" />
+                    <svg class="about-arrow" width="20" height="20" aria-label="icon-arrow-down">
+                        <use href="../img/icons.svg#icon-arrow-down"></use>
                     </svg>
-                    </button>
+                </button>
             </div>
             <ul class="about-education-text">
                 <li class="about-text-list">
@@ -54,8 +55,8 @@
             <div class="about-education-container">
                 <h3 class="about-education-title">Role</h3>
                 <button type="button" class="about-accordion">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 7.5L10 12.5L5 7.5" stroke="#FAFAFA" stroke-width="2" />
+                    <svg class="about-arrow" width="20" height="20" aria-label="icon-arrow-down">
+                        <use href="../img/icons.svg#icon-arrow-down"></use>
                     </svg>
                 </button>
             </div>
@@ -69,8 +70,8 @@
             <div class="about-education-container">
                 <h3 class="about-education-title">Education</h3>
                 <button type="button" class="about-accordion">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 7.5L10 12.5L5 7.5" stroke="#FAFAFA" stroke-width="2" />
+                    <svg class="about-arrow" width="20" height="20" aria-label="icon-arrow-down">
+                        <use href="../img/icons.svg#icon-arrow-down"></use>
                     </svg>
                 </button>
             </div>
@@ -81,35 +82,29 @@
             </ul>
         </li>
     </ul>
-    <ul class="about-skills">
-        <li class="about-skills-list">
-            <p class="skills-list-item">
-                HTML/CSS
-            </p>
-        </li>
-        <li class="about-skills-list">
-            <p class="skills-list-item">
-                JavaScript
-            </p>
-        </li>
-        <li class="about-skills-list">
-            <p class="skills-list-item">
-                React
-            </p>
-        </li>
-        <li class="about-skills-list">
-            <p class="skills-list-item">
-                Node. js
-            </p>
-        </li>
-        <li class="about-skills-list">
-            <p class="skills-list-item">
-                React Native
-            </p>
-        </li>
-        <li class="about-skills-list">
-            <p class="skills-list-item">
-                Soft skills
-            </p>
-        </li>
-    </ul>
+    <div class="about-swiper swiper">
+        <ul class="about-skills swiper-wrapper">
+            <li class="about-skills-list swiper-slide">
+                <span class="skills-list-item">HTML/CSS</span>
+            </li>
+            <li class="about-skills-list swiper-slide">
+                <span class="skills-list-item">JavaScript</span>
+            </li>
+            <li class="about-skills-list swiper-slide">
+                <span class="skills-list-item">React</span>
+            </li>
+            <li class="about-skills-list swiper-slide">
+                <span class="skills-list-item">Node. js</span>
+            </li>
+            <li class="about-skills-list swiper-slide">
+                <span class="skills-list-item"> React Native</span>
+            </li>
+            <li class="about-skills-list swiper-slide">
+                <span class="skills-list-item">Soft skills</span>
+            </li>
+        </ul>
+        <div class="about__swiper-button-next"></div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+    </div>
+</section>
