@@ -38,7 +38,6 @@
 }
 
 .about-education-list {
-    /* max-height: 68px; */
     overflow: hidden;
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     padding-bottom: 20px;
@@ -130,7 +129,8 @@
     display: flex !important;
     flex-direction: row !important;
 
-
+    margin-top: 32px;
+    margin-bottom: 64px;
 }
 
 .about-icon-right {
@@ -168,27 +168,25 @@
     }
 
     .about-education-list {
-        /* max-height: 72px; */
         padding-bottom: 32px;
         margin-bottom: 32px;
     }
 
-
+    .about-swiper {
+        margin-top: 64px;
+        margin-bottom: 96px;
+    }
 
     .about-skills {
         width: 600px;
-
     }
 
     .about-skills-list {
         width: 200px !important;
         height: 200px !important;
-
     }
 
     .skills-list-item {
-        /* min-width: 200px;
-        min-height: 200px; */
         font-weight: 500;
         font-size: 20px;
         line-height: 1.5;
@@ -232,6 +230,10 @@
         min-width: 612px;
     }
 
+    .about-swiper {
+        margin-top: 96px;
+        margin-bottom: 164px;
+    }
     .about-skills {
         width: 1200px;
 
