@@ -1,59 +1,71 @@
-import Swiper from 'swiper';
-
-import { Navigation, Pagination } from 'swiper/modules';
-
-import 'swiper/css';
-
-// const swiper = new Swiper(...);
-
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
+import Swiper from 'swiper';
+import { Navigation, Keyboard } from 'swiper/modules';
+import 'swiper/css';
 
-const swiper = new Swiper('.about-swiper', {
-  loop: true,
-  loopSlides: 6,
-  spaceBetween: 0,
-  keyboard: {
-    enabled: true,
-  },
-  mousewheel: {
-    invert: true,
-  },
-  modules: [Navigation],
+
+const swiperBoxAbout = document.querySelector('.about-swiper');
+const nextBtn = document.querySelector('.about-swiper-button-next');
+
+
+
+new Swiper(swiperBoxAbout, {
+    loop: true,
+    modules: [Navigation, Keyboard],
+    slidesPerView: 2,
   navigation: {
-    nextEl: '.about__swiper-button-next',
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
+    nextEl: nextBtn,
     },
+    keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+  direction: 'horizontal',
+  centeredSlides: true,
+  watchOverflow: false,
+  breakpoints: {
     768: {
       slidesPerView: 3,
     },
+
     1440: {
-      slidesPerView: 6,
+        slidesPerView: 6,
     },
   },
+  disabledClass: 'swiper-button-nest-disabled',
 });
-// const swiper = new Swiper('.about-swiper', {
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
 
-//   loop: true,
 
-//   loopAdditionalSlides: 3,
 
-//   breakpoints: {
-//     375: {
-//       slidesPerView: 2,
-//     },
-//     768: {
-//       slidesPerView: 3,
-//     },
-//     1440: {
-//       slidesPerView: 6,
-//     },
-//   },
-// });
+
+    new Accordion('.about-education', { duration: 600,
+  collapse: true,
+  openOnInit: [0],
+  showMultiple: true,
+  onOpen: () => {
+    aboutArr.classList.add("rotate");
+  },
+  onClose: () => {
+    aboutArr.classList.remove("rotate");
+  }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const accordions = document.querySelectorAll('.about-education-list');
+
+    accordions.forEach(accordion => {
+        accordion.addEventListener('click', function() {
+            const arrow = this.querySelector('.about-arrow');
+            const description = this.querySelector('.text-acordion')
+
+            arrow.classList.toggle('rotate');
+            description.classList.toggle('visually-hidden');
+        });
+    });
+
+    new Accordion('.faq-section', {
+        duration: 400,
+        showFirstItem: false,
+    });
+});
