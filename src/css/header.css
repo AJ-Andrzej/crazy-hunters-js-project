@@ -1,0 +1,368 @@
+.header-container {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+
+
+.header-logo-img {
+    position: absolute;
+    top: 32px;
+    left: 16px;
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    border: none;
+    margin-right: 8px;
+}
+
+.title-logo {
+    position: absolute;
+    top: 32px;
+    left: 104px;
+    color: rgb(250, 250, 250);
+    font-family: Inter Tight;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+}
+
+
+
+.menu-checkbox {
+    display: none;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: 46%;
+    right: 50%;
+    top: 45px;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+    color: rgb(250, 250, 250);
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.2px;
+    text-align: left;
+}
+
+.nav [type="checkbox"] {
+    position: absolute;
+}
+
+.nav [type="checkbox"]+label {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+    background-color: #ED3B44;
+}
+
+.nav [type="checkbox"]+label:hover {
+    background-color: #E0373F;
+}
+
+.menu li {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.4s;
+}
+
+.menu li:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.menu li:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.menu li:nth-child(3) {
+    transition-delay: 0.1s;
+}
+
+.menu li:nth-child(4) {
+    transition-delay: 0.05s;
+}
+
+.menu li a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ED3B44;
+}
+
+.menu li a span {
+    position: absolute;
+    top: 0;
+    transform: translateY(calc(-100% - 5px));
+    width: 100%;
+    font-size: 13px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-item-about {
+    left: -3px;
+}
+
+.menu-item-faq {
+    left: 12px;
+}
+
+.nav input:checked+label {
+    background: #E0373F;
+    transform: translateY(calc(-50% + 4px));
+}
+
+.nav input:checked~.menu li:nth-child(1) {
+    top: 100px;
+    left: -30px;
+    transition-delay: 0.1s;
+}
+
+.nav input:checked~.menu li:nth-child(2) {
+    top: 100px;
+    left: calc(50% - 141px);
+    transition-delay: 0.2s;
+}
+
+.nav input:checked~.menu li:nth-child(3) {
+    top: 100px;
+    left: calc(50% + 141px);
+    transition-delay: 0.3s;
+}
+
+.nav input:checked~.menu li:nth-child(4) {
+    top: 100px;
+    left: 107px;
+    transition-delay: 0.4s;
+}
+
+.nav input:checked~.menu li a span {
+    opacity: 1;
+    transition-delay: 0.9s;
+}
+
+.header-main-btn {
+    display: flex;
+    display: none;
+    width: 164px;
+    height: 45px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 31px 14px 31px;
+    border-radius: 60px;
+    background-color: #ED3B44;
+    color: rgb(250, 250, 250);
+    font-family: Inter Tight;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    border: none;
+}
+
+.header-main-btn:hover,
+.header-main-btn:focus {
+    color: #ED3B44;
+}
+
+
+.header-mob-menu {
+    width: 100%;
+    height: 100%;
+    max-width: 375px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 8;
+    padding: 20px 20px 0 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: auto;
+    background-image: url(../img/menu-png.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(100%);
+    transition: transform 1s ease-out;
+}
+
+
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
+
+
+
+.mob-menu-link:hover,
+.mob-menu-link:focus,
+.mob-menu-link:active {
+    color: #FCF9F9;
+}
+
+.menu-open-btn {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    right: 16px;
+    top: 32px;
+    background-color: transparent;
+    border: none;
+    fill: transparent;
+    padding: 0;
+    margin-left: auto;
+}
+
+
+
+
+.mob-menu-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.mob-menu-close-btn {
+    background-color: transparent;
+    border: none;
+    fill: transparent;
+    padding: 0;
+    margin-left: auto;
+}
+
+
+
+
+.mob-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+
+
+.mob-menu-link {
+    font-family: Inter Tight;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    text-decoration-line: underline;
+    color: #fafafa;
+}
+
+
+.mob-menu-link:hover,
+.mob-menu-link:focus {
+    color: #ED3B44;
+}
+
+.header-order-btn {
+    width: 164px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 31px 14px 31px;
+    border-radius: 60px;
+    background-color: #ED3B44;
+    color: rgb(250, 250, 250);
+    font-family: Inter Tight;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    border: none;
+    margin-bottom: 64px;
+}
+
+.header-order-btn:hover,
+.header-order-btn:focus {
+    background-color: #E0373F;
+}
+
+@media screen and (min-width: 768px) {
+    .header-container {
+        max-width: 768px;
+    }
+
+    .logo-img {
+        left: 32px;
+    }
+
+    .title-logo {
+        left: 120px;
+    }
+
+    .header-title-menu {
+        display: block;
+
+    }
+
+    .menu-open-btn {
+        display: none;
+    }
+
+    .header-main-btn {
+        display: block;
+        position: absolute;
+        top: 32px;
+        right: 32px;
+    }
+
+    .menu-checkbox {
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .header-container {
+        max-width: 1440px;
+    }
+}
