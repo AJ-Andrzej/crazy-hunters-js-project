@@ -7,7 +7,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 import { getReviews } from './api';
 
 const list = document.querySelector('.reviews-main-list');
-const swiperContainer = document.querySelector('.swiper');
+const swiperContainer = document.querySelector('.reviews-swiper');
 
 function renderReview({ avatar_url, author, review }) {
   return `<li class="reviews-item swiper-slide">
