@@ -1,10 +1,39 @@
 <header class="header">
     <div class="header-container">
         <a class="header-logo" href="../index.html">
-            <img class="logo-img" src="../img/logo-img.jpg" alt="logo-img" width="80" height="80">
+            <img class="header-logo-img" src="../img/logo-img.jpg" alt="logo-img" width="80" height="80">
         </a>
         <div class="title-logo">jefferson*</div>
-        <div class="header-title-menu">Menu</div>
+        <div class="menu-checkbox">
+            <nav class="nav">
+                <input id="menu" type="checkbox">
+                <label for="menu">Menu</label>
+                <ul class="menu">
+                    <li>
+                        <a href="#About me" aria-label="About me" alt="About me">
+                            <span class="menu-item-about">About me</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Benefits" aria-label="About me" alt="About me">
+                            <span class="menu-item">Benefits</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Projects" aria-label="Projects" alt="Projects">
+                            <span class="menu-item">Projects</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#FAQ" aria-label="FAQ" alt="FAQ">
+                            <span class="menu-item-faq">FAQ</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <button type="button" class="header-main-btn">Order the project</button>
         <button type="button" class="menu-open-btn" data-menuBTN-open aria-label="menu open button">
             <svg class="menu-open-btn-icon" width="28" height="28">
@@ -13,7 +42,7 @@
         </button>
     </div>
 
-    <div class="mob-menu" data-menu>
+    <div class="header-mob-menu" data-menu>
         <div class="mob-menu-container">
             <button type="button" class="mob-menu-close-btn" data-menuBTN-close aria-label="menu close button">
                 <svg class="mob-menu-close-btn-icon" width="28" height="28">
