@@ -40,7 +40,8 @@ const modal = document.querySelector(".footer-modal");
 
 const closeBtn = document.querySelector(".footer-close-btn");
 const modalBackdrop = document.querySelector(".footer-modal");
-closeBtn.addEventListener("click", closeModal);
+
+closeBtn.addEventListener('click', closeModal);
 modalBackdrop.addEventListener("click", function (event) {
   if (event.target === modalBackdrop) {
     closeModal();
@@ -52,6 +53,6 @@ document.addEventListener("keydown", function (event) {
   }
 });
 function closeModal() {
-  modal.classList.add("visually-hidde");
+  modal.classList.add("visually-hidden");
 }
   
