@@ -91,9 +91,9 @@
  }
 
  .reviews-item {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   display: block;
+   /* justify-content: center;
+   align-items: center; */
    cursor: grab;
    height: 330px !important;
  }
