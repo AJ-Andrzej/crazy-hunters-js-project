@@ -1,5 +1,129 @@
+
+// import Swiper from 'swiper';
+// import { Navigation, Keyboard } from 'swiper/modules';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+
+// const swiperBox = document.querySelector('.swiper-wrapper');
+// export const nextBtn = document.querySelector('.swiper-button-next');
+// export const prevBtn = document.querySelector('.swiper-button-prev');
+
+
+
+// const swiperProjects = new Swiper(swiperBox, {
+//   modules: [Navigation, Keyboard],
+//   navigation: {
+//     nextEl: nextBtn,
+//     prevEl: prevBtn,
+//   },
+//   direction: 'horizontal',
+//   centeredSlides: true,
+//   watchOverflow: true,
+//   keyboard: {
+//     enabled: true,
+//     onlyInViewport: true,
+//     pageUpDown: true,
+//   },
+//   slidesPerView: 1,
+// });
+
+
+// const nextBtnObserver = new MutationObserver(mutations => {
+//     mutations.forEach(mutation => {
+//       if (mutation.attributeName === 'class') {
+//         const disabled = nextBtn.classList.contains('swiper-button-disabled');
+//         if (disabled) {
+//             nextBtn.style.opacity = '0.5';
+//             nextBtn.style.cursor = 'not-allowed';
+//         } else {
+//             nextBtn.style.opacity = '1';
+//             nextBtn.style.cursor = 'pointer';
+//         }
+//       }
+//     });
+//   });
+  
+//   nextBtnObserver.observe(nextBtn, { attributes: true });
+
+  
+//   const prevBtnObserver = new MutationObserver(mutations => {
+//     mutations.forEach(mutation => {
+//       if (mutation.attributeName === 'class') {
+//         const disabled = prevBtn.classList.contains('swiper-button-disabled');
+//         if (disabled) {
+//             prevBtn.style.opacity = '0.5';
+//             prevBtn.style.cursor = 'not-allowed';
+//         } else {
+//             prevBtn.style.opacity = '1';
+//             prevBtn.style.cursor = 'pointer';
+//         }
+//       }
+//     });
+//   });
+  
+// prevBtnObserver.observe(prevBtn, { attributes: true });
+  
+
+
+
+
+
+// ========================================
+
 import Swiper from 'swiper';
-import 'swiper/css';
+import { Navigation, Keyboard } from 'swiper/modules';
+
+
+export const nextButton = document.querySelector('.projects-next-btn');
+export const prevButton = document.querySelector('.projects-prev-btn');
+
+const swiperProjects = new Swiper('.swiper-project', {
+  preventInteractionOnTransition: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+prevButton.disabled = true;
+
+prevButton.addEventListener('click', function () {
+  swiperProjects.slidePrev();
+});
+
+nextButton.addEventListener('click', function () {
+  swiperProjects.slideNext();
+});
+
+swiperProjects.on('slideChange', function () {
+  nextButton.disabled = swiperProjects.isEnd ? true : false;
+  prevButton.disabled = swiperProjects.isBeginning ? true : false;
+});
+
+
+// const swiperBox = document.querySelector('.swiper-projects');
+// export const nextBtn = document.querySelector('.projects-next-btn');
+// export const prevBtn = document.querySelector('.projects-prev-btn')
+
+
+// const swiperProjects = new Swiper(swiperBox, {
+//     modules: [Navigation, Keyboard],
+//     slidesPerView: 1,
+//   spaceBetween: 16,
+//   navigation: {
+//     nextEl: nextBtn,
+//     prevEl: prevBtn,
+//   },
+//   direction: 'horizontal',
+//   centeredSlides: true,
+//   watchOverflow: false,
+//   keyboard: {
+//     enabled: true,
+//     onlyInViewport: true,
+//     pageUpDown: true,
+//   },
+//   disabledClass: 'swiper-button-disabled',
+// });
 
 // const mySwiper = new Swiper('.swiper-container', {
 //   spaceBetween: 30,
@@ -40,28 +164,6 @@ import 'swiper/css';
 //         });
 //     })
 // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
