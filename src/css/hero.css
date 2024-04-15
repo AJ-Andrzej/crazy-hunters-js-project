@@ -103,7 +103,7 @@
 
     .container-hero {
         max-width: 768px;
-
+        padding: 32px;
     }
 
     .hero-title {

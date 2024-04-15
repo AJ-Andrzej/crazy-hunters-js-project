@@ -333,7 +333,7 @@
         max-width: 768px;
     }
 
-    .logo-img {
+    .header-logo-img {
         left: 32px;
     }
 
@@ -366,6 +366,9 @@
 @media screen and (min-width: 1440px) {
     .header-container {
         max-width: 1440px;
+    }
+    .hero-title{
+        width: 1084px;
     }
 }
 
