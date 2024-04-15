@@ -2,7 +2,7 @@
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
-  background: url('./img/footer-background-color.jpg') calc(290px - 100%) top no-repeat, #1c1d20;
+  background: url('../img/footer-background-color.jpg') calc(290px - 100%) top no-repeat, #1c1d20;
   background-size: cover;
 }
 

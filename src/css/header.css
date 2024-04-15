@@ -210,7 +210,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: auto;
-    background-image: url(./img/header-menu-png.png);
+    background-image: url(../img/header-menu-png.png);
     background-size: cover;
     background-repeat: no-repeat;
     transform: translateX(100%);
