@@ -6,6 +6,7 @@
     body: document.querySelector('body'),
     menuLIst: document.querySelector('[data-menu-list]'),
   };
+
   refs.openMenuBtn.addEventListener('click', toggleModal);
   refs.closeMenuBtn.addEventListener('click', toggleModal);
   refs.menuLIst.addEventListener('click', toggleModal);
@@ -20,3 +21,5 @@
     refs.body.classList.remove('no-scroll');
   });
 })();
+
+
