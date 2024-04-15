@@ -13,11 +13,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 32px;
+    margin-bottom: 32px; 
 }
 .transform {
     transform: rotate(180deg);
 }
+
 .project-list-skils {
     display: flex;
     gap: 6px;
@@ -26,7 +27,9 @@
     flex-wrap: wrap;
     padding-top: 32px;
 }
-
+.swiper {
+    height: 812px;
+}
 .projects-skils {
     box-sizing: border-box;
     border: 1px solid rgba(28, 29, 32, 0.2);
@@ -78,7 +81,12 @@
     text-align: left;
     letter-spacing: -2%;
 }
+.project-information-div {
+    background: rgb(250, 250, 250);
+    height: 408px;
+    border-radius: 24px 24px 0px 0px;
 
+}
 
 .project-button:hover,
 .project-button:focus {
@@ -88,7 +96,7 @@
 .project-photo {
     border-radius: 0px 0px 24px 24px;
     background: rgb(36, 37, 39);
-    max-width: 343px;
+    width: 343px;
     height: 395px;
 }
 
@@ -99,7 +107,8 @@
 
 .project-all-div {
     border-radius: 24px;
-    background: rgb(250, 250, 250);
+   
+    height: 952px;
 }
 
 .projects-arrow {
@@ -108,28 +117,40 @@
     width: 52px;
     height: 52px;
     border: 2px solid rgb(59, 59, 59);
+    stroke: black;
 }
 .projects-arrow:hover,
 .projects-arrow:focus {
     border: 1px solid rgba(250, 250, 250, 0.5);
-    stroke: (250, 250, 250);
+    stroke: rgb(250, 250, 250);
 }
 
-.projects-arrow-list {
+.projects-btn-container {
     justify-content: center;
     display: flex;
     gap: 12px;
     margin-top: 32px;
 }
+
 /* ==================Tablet start================== */
 @media screen and (min-width: 768px) {
-
     .project-list-skils {
         padding-top: 64px;
         margin-left: 64px;
         margin-bottom: 164px;
     }
-
+    .project-information-div {
+        height: 596px;
+        width: 704px;
+        }
+    .swiper-slide {
+        height: 1191px;
+        width: 704px;
+    }
+    .swiper {
+      
+        height: 1247px;
+    }
     .projects-h3 {
         font-size: 44px;
         line-height: 44px;
@@ -151,7 +172,7 @@
     }
 
     .project-photo {
-        min-width: 704px;
+        width: 704px;
         height: 625px;
     }
 
@@ -201,4 +222,5 @@
         margin: auto 37px;
     }
 }
-/* ==================Desctop end================== */
+/* ==================Desctop end================== */ 
+
