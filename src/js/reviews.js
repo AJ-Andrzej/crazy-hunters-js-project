@@ -8,6 +8,9 @@ import { getReviews } from './api';
 
 const list = document.querySelector('.reviews-main-list');
 const swiperContainer = document.querySelector('.reviews-swiper');
+const nextButton = document.querySelector('.reviews-next-btn');
+const prevButton = document.querySelector('.reviews-prev-btn');
+
 
 function renderReview({ avatar_url, author, review }) {
   return `<li class="reviews-item swiper-slide">
@@ -75,8 +78,44 @@ const swiper = new Swiper(swiperContainer, {
   },
   direction: 'horizontal',
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.reviews-next-btn',
+    prevEl: '.reviews-prev-btn',
   },
-  disabledClass: 'swiper-button-disabled',
+  disabledClass: '.swiper-button-disabled',
 });
+
+const nextButtonObserver = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      if (mutation.attributeName === 'class') {
+        const disabled = nextButton.classList.contains('swiper-button-disabled');
+        if (disabled) {
+            nextButton.style.opacity = '0.5';
+            nextButton.style.cursor = 'not-allowed';
+        } else {
+            nextButton.style.opacity = '1';
+            nextButton.style.cursor = 'pointer';
+        }
+      }
+    });
+  });
+  
+  nextButtonObserver.observe(nextButton, { attributes: true });
+
+  
+  const prevButtonObserver = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      if (mutation.attributeName === 'class') {
+        const disabled = prevButton.classList.contains('swiper-button-disabled');
+        if (disabled) {
+            prevButton.style.opacity = '0.5';
+            prevButton.style.cursor = 'not-allowed';
+        } else {
+            prevButton.style.opacity = '1';
+            prevButton.style.cursor = 'pointer';
+        }
+      }
+    });
+  });
+  
+  prevButtonObserver.observe(prevButton, { attributes: true });
+
