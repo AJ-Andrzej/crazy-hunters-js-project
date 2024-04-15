@@ -1,86 +1,73 @@
+// swiperProjects.on('slideChange', function () {
+//   nextButton.disabled = swiperProjects.isEnd ? true : false;
+//   prevButton.disabled = swiperProjects.isBeginning ? true : false;
+// });
+// ============================================================== Ментор.
 import Swiper from 'swiper';
+import { Navigation, Keyboard } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
+Swiper.use([Navigation, Keyboard]);
 
-// const mySwiper = new Swiper('.swiper-container', {
-//   spaceBetween: 30,
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-//   mousewheel: true,
-//   keyboard: true,
-// });
+const swiperBox = document.querySelector('.swiper-project');
+export const nextButton = document.querySelector('.projects-next-btn');
+export const prevButton = document.querySelector('.projects-prev-btn');
 
-// ========================================================
+prevButton.addEventListener('click', function () {
+  swiperProjects.slidePrev();
+});
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const mySwiper = new Swiper('.swiper-container', {
+nextButton.addEventListener('click', function () {
+  swiperProjects.slideNext();
+});
 
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//   });
 
-//   const prevButton = document.querySelector('.swiper-button-prev');
-//   const nextButton = document.querySelector('.swiper-button-next');
+const swiperProjects = new Swiper(swiperBox, {
+  preventInteractionOnTransition: true,
+  navigation: {
+    nextEl: nextButton,
+    prevEl: prevButton,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+});
 
-//     prevButton.addEventListener('click', () => {
-//         mySwiper.slidePrev();
 
-//         nextButton.addEventListener('click', () => {
-//             mySwiper.slideNext()
-//         });
-//     })
-// });
+const nextButtonObserver = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      if (mutation.attributeName === 'class') {
+        const disabled = nextButton.classList.contains('button-disabled');
+        if (disabled) {
+            nextButton.style.opacity = '0.5';
+            nextButton.style.cursor = 'not-allowed';
+        } else {
+            nextButton.style.opacity = '1';
+            nextButton.style.cursor = 'pointer';
+        }
+      }
+    });
+  });
+  
+  nextButtonObserver.observe(nextButton, { attributes: true });
 
-// const nextEl = document.querySelector('.swiper-button-next');
-// const prevEl = document.querySelector('.swiper-button-prev')
+  
+  const prevButtonObserver = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      if (mutation.attributeName === 'class') {
+        const disabled = prevButton.classList.contains('button-disabled');
+        if (disabled) {
+            prevButton.style.opacity = '0.5';
+            prevButton.style.cursor = 'not-allowed';
+        } else {
+            prevButton.style.opacity = '1';
+            prevButton.style.cursor = 'pointer';
+        }
+      }
+    });
+  });
+  
+  prevButtonObserver.observe(prevButton, { attributes: true });
 
-// nextEl.addEventListener("click", handleclickNext);
-// prevEl.addEventListener("click", handleclickPrev);
 
-// function handleclickNext(event) {
-//     event.preventDefault();
-// const Myswiper = new Swiper('.mySwiper', {
-//         spaceBetween: 30,
-//         navigation: {
-//           nextEl: '.swiper-button-next',
-//           prevEl: '.swiper-button-prev',
-//         },
-//         pagination: {
-//           el: '.swiper-pagination',
-//         },
-//         mousewheel: true,
-//         keyboard: true,
-// });
-
-// }
-// function handleclickPrev(event) {
-//     event.preventDefault();
-// }
-// const mySwiper = new Swiper('.swiper-container', {
-//   direction: 'horizontal',
-//   loop: false,
-//   navigation: {
-//     nextEl,
-//     prevEl,
-//   },
-// });
-
-// import Swiper from 'swiper';
-// const Myswiper = new Swiper('.mySwiper', {
-//         spaceBetween: 30,
-//         navigation: {
-//           nextEl: '.swiper-button-next',
-//           prevEl: '.swiper-button-prev',
-//         },
-//         pagination: {
-//           el: '.swiper-pagination',
-//         },
-//         mousewheel: true,
-//         keyboard: true,
-// });
