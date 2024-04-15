@@ -24,89 +24,133 @@
 
   <body>
     <header class="header">
-    <div class="header-container">
-        <a class="header-logo" href="./index.html">
-            <img class="header-logo-img" src="/crazy-hunters-js-project/assets/logo-png-99700b1c.png" alt="logo-img" width="80" height="80" />
-        </a>
-        <div class="title-logo">jefferson*</div>
-        <div class="menu-checkbox">
-            <nav class="nav">
-                <input id="menu" type="checkbox" />
-                <label for="menu">Menu</label>
-                <ul class="menu">
-                    <li>
-                        <a href="#about" aria-label="About me" alt="About me">
-                            <svg width="28" height="28" class="menu-svg">
-                                <use href="../img/icons.svg#icon-menu-aboutme"></use>
-                            </svg>
-                            <span class="menu-item-about">About me</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#benefits" aria-label="About me" alt="About me">
-                            <svg width="26" height="26" class="header-menu-svg">
-                                <use href="../img/icons.svg#icon-menu-benefits" class="menu-svg"></use>
-                            </svg>
-                            <span class="menu-item">Benefits</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#projects" aria-label="Projects" alt="Projects">
-                            <svg width="28" height="28" class="menu-svg">
-                                <use href="../img/icons.svg#icon-menu-projects"></use>
-                            </svg>
-                            <span class="menu-item">Projects</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#faq" aria-label="FAQ" alt="FAQ">
-                            <svg width="28" height="28" class="menu-svg">
-                                <use href="../img/icons.svg#icon-menu-faq"></use>
-                            </svg>
-                            <span class="menu-item-faq">FAQ</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <a href="#cooperation-section" class="header-main-btn">Order the project</a>
-
-        <button type="button" class="menu-open-btn" data-menuBTN-open aria-label="menu open button">
-            <svg class="menu-open-btn-icon" width="28" height="28">
-                <use href="/crazy-hunters-js-project/assets/icons-95273a65.svg#icon-burger-menu"></use>
-            </svg>
-        </button>
+  <div class="header-container">
+    <a class="header-logo" href="./index.html">
+      <img
+        class="header-logo-img"
+        src="/crazy-hunters-js-project/assets/logo-png-99700b1c.png"
+        alt="logo-img"
+        width="80"
+        height="80"
+      />
+    </a>
+    <div class="title-logo">jefferson*</div>
+    <div class="menu-checkbox">
+      <nav class="nav">
+        <input id="menu" type="checkbox" />
+        <label for="menu">Menu</label>
+        <ul class="menu">
+          <li>
+            <a href="#about" aria-label="About me" alt="About me">
+              <svg width="28" height="28" class="menu-svg">
+                <use href="/crazy-hunters-js-project/assets/icons-95273a65.svg#icon-menu-aboutme"></use>
+              </svg>
+              <span class="menu-item-about">About me</span>
+            </a>
+          </li>
+          <li>
+            <a href="#benefits" aria-label="About me" alt="About me">
+              <svg width="26" height="26" class="header-menu-svg">
+                <use
+                  href="/crazy-hunters-js-project/assets/icons-95273a65.svg#icon-menu-benefits"
+                  class="menu-svg"
+                ></use>
+              </svg>
+              <span class="menu-item">Benefits</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects" aria-label="Projects" alt="Projects">
+              <svg width="28" height="28" class="menu-svg">
+                <use href="/crazy-hunters-js-project/assets/icons-95273a65.svg#icon-menu-projects"></use>
+              </svg>
+              <span class="menu-item">Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="#faq" aria-label="FAQ" alt="FAQ">
+              <svg width="28" height="28" class="menu-svg">
+                <use href="../img/icons.svg#icon-menu-faq"></use>
+              </svg>
+              <span class="menu-item-faq">FAQ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
+    <a href="#cooperation-section" class="header-main-btn">Order the project</a>
 
-    <div class="header-mob-menu" data-menu>
-        <div class="mob-menu-container">
-            <button type="button" class="mob-menu-close-btn" data-menuBTN-close aria-label="menu close button">
-                <svg class="mob-menu-close-btn-icon" width="28" height="28">
-                    <use href="/crazy-hunters-js-project/assets/icons-95273a65.svg#icon-closed-modal"></use>
-                </svg>
-            </button>
+    <button
+      type="button"
+      class="menu-open-btn"
+      data-menuBTN-open
+      aria-label="menu open button"
+    >
+      <svg class="menu-open-btn-icon" width="28" height="28">
+        <use href="/crazy-hunters-js-project/assets/icons-95273a65.svg#icon-burger-menu"></use>
+      </svg>
+    </button>
+  </div>
 
-            <ul class="mob-menu-list">
-                <li class="mob-menu-item">
-                    <a class="mob-menu-link" href="#about" aria-label="About me" alt="About me">About me</a>
-                </li>
-                <li class="mob-menu-item">
-                    <a class="mob-menu-link" href="#benefits" aria-label="Benefits" alt="Benefits">Benefits</a>
-                </li>
-                <li class="mob-menu-item">
-                    <a class="mob-menu-link" href="#projects" aria-label="Projects" alt="Projects">Projects</a>
-                </li>
-                <li class="mob-menu-item">
-                    <a class="mob-menu-link" href="#faq" aria-label="FAQ" alt="FAQ">FAQ</a>
-                </li>
-            </ul>
-            <a href="#cooperation-section" aria-label="Work together" alt="Work together"><button
-                    class="header-order-btn" type="button">
-                    Order the project
-                </button></a>
-        </div>
+  <div class="header-mob-menu" data-menu>
+    <div class="mob-menu-container">
+      <button
+        type="button"
+        class="mob-menu-close-btn"
+        data-menuBTN-close
+        aria-label="menu close button"
+      >
+        <svg class="mob-menu-close-btn-icon" width="28" height="28">
+          <use href="/crazy-hunters-js-project/assets/icons-95273a65.svg#icon-closed-modal"></use>
+        </svg>
+      </button>
+
+      <ul class="mob-menu-list">
+        <li class="mob-menu-item">
+          <a
+            class="mob-menu-link"
+            href="#about"
+            aria-label="About me"
+            alt="About me"
+            >About me</a
+          >
+        </li>
+        <li class="mob-menu-item">
+          <a
+            class="mob-menu-link"
+            href="#benefits"
+            aria-label="Benefits"
+            alt="Benefits"
+            >Benefits</a
+          >
+        </li>
+        <li class="mob-menu-item">
+          <a
+            class="mob-menu-link"
+            href="#projects"
+            aria-label="Projects"
+            alt="Projects"
+            >Projects</a
+          >
+        </li>
+        <li class="mob-menu-item">
+          <a class="mob-menu-link" href="#faq" aria-label="FAQ" alt="FAQ"
+            >FAQ</a
+          >
+        </li>
+      </ul>
+      <a
+        href="#cooperation-section"
+        aria-label="Work together"
+        alt="Work together"
+        ><button class="header-order-btn" type="button">
+          Order the project
+        </button></a
+      >
     </div>
+  </div>
 </header>
+
 
     <main>
       <section class="hero">
@@ -259,20 +303,20 @@
           <p class="skills-list-item">Node. js</p>
         </li>
         <li class="about-skills-list swiper-slide">
-          <p class="skills-list-item"> React Native</p>
+          <p class="skills-list-item">React Native</p>
         </li>
         <li class="about-skills-list swiper-slide">
           <p class="skills-list-item">Soft skills</p>
         </li>
       </ul>
     </div>
-      <div class="about-swiper-button-next">
-        <button class="btn-about-swiper" type="button">
-          <svg class="about-icon-right" width="40" height="40">
-            <use href="/crazy-hunters-js-project/assets/icons-95273a65.svg#icon-arrow-right"></use>
-          </svg>
-        </button>
-      </div>
+    <div class="about-swiper-button-next">
+      <button class="btn-about-swiper" type="button">
+        <svg class="about-icon-right" width="40" height="40">
+          <use href="/crazy-hunters-js-project/assets/icons-95273a65.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </section>
 
