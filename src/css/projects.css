@@ -1,10 +1,3 @@
-
-.button-disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
-    color: blue;
-}
 .projects-h2 {
     color: rgba(250, 250, 250, 0.4);
     font-family: Inter Tight;
@@ -113,34 +106,47 @@
     border-radius: 24px;
 }
 
-.projects-arrow {
+
+.projects-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+
+}
+
+.projects-prev-btn {
+    border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
     padding: 14px;
     width: 52px;
     height: 52px;
-    border: 2px solid rgb(59, 59, 59);
-    stroke: rgb(250, 250, 250);
-}
-.projects-arrow:hover,
-.projects-arrow:focus {
-    border: 1px solid rgba(250, 250, 250, 0.5);
-    stroke: black;
-}
-
-
-.projects-btn-container {
-    justify-content: center;
+    background-color: transparent;
+    transform: rotate(-180deg);
     display: flex;
-    gap: 12px;
-    margin-top: 32px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
-.projects-prev-btn,
+
 .projects-next-btn {
-    background-color: #1c1d20;
-    border: none;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+    padding: 14px;
+    width: 52px;
+    height: 52px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
+.projects-arrow-right-icon,
+.projects-arrow-left-icon {
+    stroke: #fafafa;
+}
 /* ==================Tablet start================== */
 @media screen and (min-width: 768px) {
     .project-list-skils {
@@ -185,15 +191,11 @@
         padding: 120px 0;
     }
 
-    .projects-arrow {
+    .projects-next-btn, 
+    .projects-prev-btn {
         width: 68px;
         height: 68px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         padding: 18px;
-        border: 1px solid rgba(250, 250, 250, 0.5);
     }
 
     .projects-arrow-list {
