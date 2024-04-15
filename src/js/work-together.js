@@ -33,11 +33,30 @@ const modal = document.querySelector(".footer-modal");
     return regex.test(email);
   }
  
-  function showModal() {
-    modal.classList.remove("visually-hidden");
-    const close = setTimeout (() => modal.classList.add("visually-hidden"), 5000)
-  };
+  // function showModal() {
+  //   modal.classList.remove("visually-hidden");
+  //   const close = setTimeout (() => modal.classList.add("visually-hidden"), 5000)
+  // };
 
+  function showModal() {
+    if (validateEmail(emailInput.value)) {
+      emailInput.style.borderBottomColor = '#3cbc81';
+      emailInput.nextElementSibling.style.color = '#3cbc81';
+      emailInput.nextElementSibling.textContent = 'Success!';
+    } else {
+      emailInput.style.borderBottomColor = '#e74a3b';
+      emailInput.nextElementSibling.style.color = '#e74a3b';
+      emailInput.nextElementSibling.textContent = 'Invalid email, try again';
+    }
+    modal.classList.remove("visually-hidden");
+    document.body.style.background = 'rgba(15, 15, 16, 0.6)';
+    const close = setTimeout(() => {
+      modal.classList.add('visually-hidden');
+      document.body.style.background = '';
+    }, 5000);
+  }
+  
+  
 const closeBtn = document.querySelector(".footer-close-btn");
 const modalBackdrop = document.querySelector(".footer-modal");
 

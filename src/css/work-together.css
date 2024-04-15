@@ -1,8 +1,11 @@
 .footer-content {
   display: flex;
   padding-top: 32px;
+  padding-left: 16px;
   padding-bottom: 32px;
-  background: url('../img/footer-background-color.jpg') calc(290px - 100%) top no-repeat, #1c1d20;
+  background: url('../img/footer-background-color.jpg') calc(290px - 100%) top
+      no-repeat,
+    #1c1d20;
   background-size: cover;
 }
 
@@ -87,6 +90,7 @@
   font-size: 16px;
   letter-spacing: -0.02em;
   color: #fafafa;
+  margin-top: 32px;
   margin-bottom: 64px;
 }
 
@@ -132,7 +136,7 @@
   z-index: 999;
   width: 100%;
   height: 100%;
-  top: 25%;
+  bottom: 195px;
   background: #0e1823;
   opacity: 1;
   visibility: visible;
@@ -192,18 +196,28 @@
   background: rgba(15, 15, 16, 0.6);
 }
 
-/*додала клас is-hidden*/
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   position: absolute;
 }
 
+.email-validation-message {
+  position: relative;
+  top: 0px;
+  font-size: 14px;
+line-height: 1.28571;
+letter-spacing: -0.02em;
+}
+
 /* Для планшетів */
 @media (min-width: 768px) {
   .footer-content {
-    padding-top: 85px;
-    background: url('../img/footer-background-color.jpg') calc(999px - 100%) top repeat-y, #1c1d20;
+    padding-top: 80px;
+    padding-left: 32px;
+    background: url('../img/footer-background-color.jpg') calc(100% - (-60%)) top
+        repeat-y,
+      #1c1d20;
     background-size: auto 100%;
   }
 
@@ -225,21 +239,18 @@
   .cooperation-comment-form {
     flex-direction: row;
     gap: 0;
-  }
-
-  .footer-form-content {
-    display: flex;
     align-items: baseline;
   }
 
   .footer-form {
-    max-width: 245px;
-    margin-right: 51px;
+    width: 245px;
+    margin-right: 32px;
   }
 
   .footer-btn-form {
     width: 150px;
     height: 150px;
+    margin: 0;
   }
 
   .footer-address-item {
@@ -252,26 +263,46 @@
 
   .footer-address-btn {
     padding: 18px 32px;
+    margin-bottom: 60px;
   }
 
   .footer-modal {
     max-width: 492px;
-
+    right: 21%;
   }
+
+  .email-validation-message {
+    top: 60px;
+    right: 276px;
+  }
+
 }
 
 /* Для настільних пристроїв */
 @media (min-width: 1440px) {
-
   .footer-content {
-    justify-content: space-around;
-    background:
-      url('../img/footer-background-color.jpg') calc(100% - 150px) top repeat-y,
+    padding-left: 164px;
+    background: url('../img/footer-background-color.jpg') calc(100% - 10%) top
+        repeat-y,
       #1c1d20;
     background-size: auto 100%;
   }
 
   .footer-form {
-    max-width: 390px;
+    width: 390px;
+  }
+
+  .footer-btn-form {
+    margin-left: 54px;
+  }
+
+  .footer-modal {
+    max-width: 492px;
+    right: 36%;
+  }
+
+  .email-validation-message {
+    top: 60px;
+    right: 372px;
   }
 }
