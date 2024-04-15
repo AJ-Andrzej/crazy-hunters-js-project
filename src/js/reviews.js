@@ -8,8 +8,8 @@ import { getReviews } from './api';
 
 const list = document.querySelector('.reviews-main-list');
 const swiperContainer = document.querySelector('.reviews-swiper');
-const nextButton = document.querySelector('.reviews-next-btn');
-const prevButton = document.querySelector('.reviews-prev-btn');
+const nextButtonRev = document.querySelector('.reviews-next-btn');
+const prevButtonRev = document.querySelector('.reviews-prev-btn');
 
 
 function renderReview({ avatar_url, author, review }) {
@@ -84,38 +84,38 @@ const swiper = new Swiper(swiperContainer, {
   disabledClass: '.swiper-button-disabled',
 });
 
-const nextButtonObserver = new MutationObserver(mutations => {
+const nextButtRevonObserver = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
       if (mutation.attributeName === 'class') {
-        const disabled = nextButton.classList.contains('swiper-button-disabled');
+        const disabled = nextButtonRev.classList.contains('swiper-button-disabled');
         if (disabled) {
-            nextButton.style.opacity = '0.5';
-            nextButton.style.cursor = 'not-allowed';
+            nextButtonRev.style.opacity = '0.5';
+            nextButtonRev.style.cursor = 'not-allowed';
         } else {
-            nextButton.style.opacity = '1';
-            nextButton.style.cursor = 'pointer';
+            nextButtonRev.style.opacity = '1';
+            nextButtonRev.style.cursor = 'pointer';
         }
       }
     });
   });
   
-  nextButtonObserver.observe(nextButton, { attributes: true });
+  nextButtRevonObserver.observe(nextButtonRev, { attributes: true });
 
   
-  const prevButtonObserver = new MutationObserver(mutations => {
+  const prevButtRevonObserver = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
       if (mutation.attributeName === 'class') {
-        const disabled = prevButton.classList.contains('swiper-button-disabled');
+        const disabled = prevButtonRev.classList.contains('swiper-button-disabled');
         if (disabled) {
-            prevButton.style.opacity = '0.5';
-            prevButton.style.cursor = 'not-allowed';
+            prevButtonRev.style.opacity = '0.5';
+            prevButtonRev.style.cursor = 'not-allowed';
         } else {
-            prevButton.style.opacity = '1';
-            prevButton.style.cursor = 'pointer';
+            prevButtonRev.style.opacity = '1';
+            prevButtonRev.style.cursor = 'pointer';
         }
       }
     });
   });
   
-  prevButtonObserver.observe(prevButton, { attributes: true });
+  prevButtRevonObserver.observe(prevButtonRev, { attributes: true });
 
