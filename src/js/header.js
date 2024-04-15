@@ -4,12 +4,13 @@
     closeMenuBtn: document.querySelector('[data-menuBTN-close]'),
     menu: document.querySelector('[data-menu]'),
     body: document.querySelector('body'),
+    menuLIst: document.querySelector('[data-menu-list]'),
   };
-
   refs.openMenuBtn.addEventListener('click', toggleModal);
   refs.closeMenuBtn.addEventListener('click', toggleModal);
-
+  refs.menuLIst.addEventListener('click', toggleModal);
   function toggleModal() {
+    refs.menuLIst.classList.remove('is-open');
     refs.menu.classList.toggle('is-open');
     refs.body.classList.toggle('no-scroll');
   }
