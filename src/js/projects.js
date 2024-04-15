@@ -71,7 +71,3 @@ const nextButtonObserver = new MutationObserver(mutations => {
   prevButtonObserver.observe(prevButton, { attributes: true });
 
 
-
-
- 
-

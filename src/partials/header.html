@@ -3,7 +3,7 @@
     <a class="header-logo" href="./index.html">
       <img
         class="header-logo-img"
-        src="./img/logo-img.jpg"
+        src="./img/logo-png.png"
         alt="logo-img"
         width="80"
         height="80"
@@ -17,28 +17,44 @@
         <ul class="menu">
           <li>
             <a href="#about" aria-label="About me" alt="About me">
+              <svg width="28" height="28" class="menu-svg">
+                <use href="./img/icons.svg#icon-menu-aboutme"></use>
+              </svg>
               <span class="menu-item-about">About me</span>
             </a>
           </li>
           <li>
             <a href="#benefits" aria-label="About me" alt="About me">
+              <svg width="26" height="26" class="header-menu-svg">
+                <use
+                  href="./img/icons.svg#icon-menu-benefits"
+                  class="menu-svg"
+                ></use>
+              </svg>
               <span class="menu-item">Benefits</span>
             </a>
           </li>
           <li>
             <a href="#projects" aria-label="Projects" alt="Projects">
+              <svg width="28" height="28" class="menu-svg">
+                <use href="./img/icons.svg#icon-menu-projects"></use>
+              </svg>
               <span class="menu-item">Projects</span>
             </a>
           </li>
           <li>
             <a href="#faq" aria-label="FAQ" alt="FAQ">
+              <svg width="28" height="28" class="menu-svg">
+                <use href="./img/icons.svg#icon-menu-faq"></use>
+              </svg>
               <span class="menu-item-faq">FAQ</span>
             </a>
           </li>
         </ul>
       </nav>
     </div>
-    <button type="button" class="header-main-btn">Order the project</button>
+    <a href="#cooperation-section" class="header-main-btn">Order the project</a>
+
     <button
       type="button"
       class="menu-open-btn"
@@ -64,7 +80,7 @@
         </svg>
       </button>
 
-      <ul class="mob-menu-list">
+      <ul class="mob-menu-list" data-menu-list>
         <li class="mob-menu-item">
           <a
             class="mob-menu-link"
