@@ -1,77 +1,7 @@
 
-// import Swiper from 'swiper';
-// import { Navigation, Keyboard } from 'swiper/modules';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-
-// const swiperBox = document.querySelector('.swiper-wrapper');
-// export const nextBtn = document.querySelector('.swiper-button-next');
-// export const prevBtn = document.querySelector('.swiper-button-prev');
-
-
-
-// const swiperProjects = new Swiper(swiperBox, {
-//   modules: [Navigation, Keyboard],
-//   navigation: {
-//     nextEl: nextBtn,
-//     prevEl: prevBtn,
-//   },
-//   direction: 'horizontal',
-//   centeredSlides: true,
-//   watchOverflow: true,
-//   keyboard: {
-//     enabled: true,
-//     onlyInViewport: true,
-//     pageUpDown: true,
-//   },
-//   slidesPerView: 1,
-// });
-
-
-// const nextBtnObserver = new MutationObserver(mutations => {
-//     mutations.forEach(mutation => {
-//       if (mutation.attributeName === 'class') {
-//         const disabled = nextBtn.classList.contains('swiper-button-disabled');
-//         if (disabled) {
-//             nextBtn.style.opacity = '0.5';
-//             nextBtn.style.cursor = 'not-allowed';
-//         } else {
-//             nextBtn.style.opacity = '1';
-//             nextBtn.style.cursor = 'pointer';
-//         }
-//       }
-//     });
-//   });
-  
-//   nextBtnObserver.observe(nextBtn, { attributes: true });
-
-  
-//   const prevBtnObserver = new MutationObserver(mutations => {
-//     mutations.forEach(mutation => {
-//       if (mutation.attributeName === 'class') {
-//         const disabled = prevBtn.classList.contains('swiper-button-disabled');
-//         if (disabled) {
-//             prevBtn.style.opacity = '0.5';
-//             prevBtn.style.cursor = 'not-allowed';
-//         } else {
-//             prevBtn.style.opacity = '1';
-//             prevBtn.style.cursor = 'pointer';
-//         }
-//       }
-//     });
-//   });
-  
-// prevBtnObserver.observe(prevBtn, { attributes: true });
-  
-
-
-
-
-
-// ========================================
-
 import Swiper from 'swiper';
 import { Navigation, Keyboard } from 'swiper/modules';
+Swiper.use([Navigation, Keyboard]);
 
 
 export const nextButton = document.querySelector('.projects-next-btn');
@@ -84,8 +14,6 @@ const swiperProjects = new Swiper('.swiper-project', {
     prevEl: '.swiper-button-prev',
   },
 });
-
-prevButton.disabled = true;
 
 prevButton.addEventListener('click', function () {
   swiperProjects.slidePrev();
@@ -101,122 +29,55 @@ swiperProjects.on('slideChange', function () {
 });
 
 
-// const swiperBox = document.querySelector('.swiper-projects');
-// export const nextBtn = document.querySelector('.projects-next-btn');
-// export const prevBtn = document.querySelector('.projects-prev-btn')
+// function updateButtonState() {
+//   if (swiperProjects.isEnd) {
+//     nextButton.classList.add('disabled-button');
+//   } else {
+//     nextButton.classList.remove('disabled-button');
+//   }
 
+//   if (swiperProjects.isBeginning) {
+//     prevButton.classList.add('disabled-button');
+//   } else {
+//     prevButton.classList.remove('disabled-button');
+//   }
+// }
 
-// const swiperProjects = new Swiper(swiperBox, {
-//     modules: [Navigation, Keyboard],
-//     slidesPerView: 1,
-//   spaceBetween: 16,
-//   navigation: {
-//     nextEl: nextBtn,
-//     prevEl: prevBtn,
-//   },
-//   direction: 'horizontal',
-//   centeredSlides: true,
-//   watchOverflow: false,
-//   keyboard: {
-//     enabled: true,
-//     onlyInViewport: true,
-//     pageUpDown: true,
-//   },
-//   disabledClass: 'swiper-button-disabled',
-// });
-
-// const mySwiper = new Swiper('.swiper-container', {
-//   spaceBetween: 30,
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-//   mousewheel: true,
-//   keyboard: true,
-// });
-
-
-// ========================================================
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   const mySwiper = new Swiper('.swiper-container', {
-
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//   });
+// updateButtonState();
 
  
-//   const prevButton = document.querySelector('.swiper-button-prev');
-//   const nextButton = document.querySelector('.swiper-button-next');
 
 
-//     prevButton.addEventListener('click', () => {
-//         mySwiper.slidePrev();
 
-//         nextButton.addEventListener('click', () => {
-//             mySwiper.slideNext()
-//         });
-//     })
+// const nextButtonObserver = new MutationObserver(mutations => {
+//   mutations.forEach(mutation => {
+//     if (mutation.attributeName === 'class') {
+//       const disabled = nextButton.classList.contains('button-disabled');
+//       if (disabled) {
+//           nextButton.style.opacity = '0.5';
+//           nextButton.style.cursor = 'not-allowed';
+//       } else {
+//           nextButton.style.opacity = '1';
+//           nextButton.style.cursor = 'pointer';
+//       }
+//     }
+//   });
 // });
 
-
-
-
-// const nextEl = document.querySelector('.swiper-button-next');
-// const prevEl = document.querySelector('.swiper-button-prev')
-
-// nextEl.addEventListener("click", handleclickNext);
-// prevEl.addEventListener("click", handleclickPrev);
-
-// function handleclickNext(event) {
-//     event.preventDefault();
-// const Myswiper = new Swiper('.mySwiper', {
-//         spaceBetween: 30,
-//         navigation: {
-//           nextEl: '.swiper-button-next',
-//           prevEl: '.swiper-button-prev',
-//         },
-//         pagination: {
-//           el: '.swiper-pagination',
-//         },
-//         mousewheel: true,
-//         keyboard: true,
+// const prevButtonObserver = new MutationObserver(mutations => {
+//   mutations.forEach(mutation => {
+//     if (mutation.attributeName === 'class') {
+//       const disabled = prevButton.classList.contains('button-disabled');
+//       if (disabled) {
+//           prevButton.style.opacity = '0.5';
+//           prevButton.style.cursor = 'not-allowed';
+//       } else {
+//           prevButton.style.opacity = '1';
+//           prevButton.style.cursor = 'pointer';
+//       }
+//     }
+//   });
 // });
 
-
-
-// }
-// function handleclickPrev(event) {
-//     event.preventDefault();
-// }
-// const mySwiper = new Swiper('.swiper-container', {
-//   direction: 'horizontal', 
-//   loop: false, 
-//   navigation: {
-//     nextEl, 
-//     prevEl,
-//   },
-// });
-
-// import Swiper from 'swiper';
-// const Myswiper = new Swiper('.mySwiper', {
-//         spaceBetween: 30,
-//         navigation: {
-//           nextEl: '.swiper-button-next',
-//           prevEl: '.swiper-button-prev',
-//         },
-//         pagination: {
-//           el: '.swiper-pagination',
-//         },
-//         mousewheel: true,
-//         keyboard: true,
-// });
-
-
-
+// nextButtonObserver.observe(nextButton, { attributes: true });
+// prevButtonObserver.observe(prevButton, { attributes: true });
