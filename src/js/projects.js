@@ -14,9 +14,7 @@ import 'swiper/css';
 //   keyboard: true,
 // });
 
-
 // ========================================================
-
 
 // document.addEventListener('DOMContentLoaded', function () {
 //   const mySwiper = new Swiper('.swiper-container', {
@@ -27,10 +25,8 @@ import 'swiper/css';
 //     },
 //   });
 
- 
 //   const prevButton = document.querySelector('.swiper-button-prev');
 //   const nextButton = document.querySelector('.swiper-button-next');
-
 
 //     prevButton.addEventListener('click', () => {
 //         mySwiper.slidePrev();
@@ -40,31 +36,6 @@ import 'swiper/css';
 //         });
 //     })
 // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // const nextEl = document.querySelector('.swiper-button-next');
 // const prevEl = document.querySelector('.swiper-button-prev')
@@ -87,17 +58,15 @@ import 'swiper/css';
 //         keyboard: true,
 // });
 
-
-
 // }
 // function handleclickPrev(event) {
 //     event.preventDefault();
 // }
 // const mySwiper = new Swiper('.swiper-container', {
-//   direction: 'horizontal', 
-//   loop: false, 
+//   direction: 'horizontal',
+//   loop: false,
 //   navigation: {
-//     nextEl, 
+//     nextEl,
 //     prevEl,
 //   },
 // });
@@ -115,6 +84,3 @@ import 'swiper/css';
 //         mousewheel: true,
 //         keyboard: true,
 // });
-
-
-
