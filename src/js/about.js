@@ -4,25 +4,27 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 
-new Swiper('.about-swiper', {
+const aboutMeSwiperBox = document.querySelector('.about-swiper');
+const aboutMeNextButton = document.querySelector('.about-next-btn');
+
+const swiper = new Swiper(aboutMeSwiperBox, {
+  modules: [Navigation, Keyboard],
+  preventInteractionOnTransition: true,
+  navigation: {
+    nextEl: aboutMeNextButton,
+  },
   loop: true,
   direction: 'horizontal',
-  allowSlideNext: true,
-  setWrapperSize: true,
-  modules: [Navigation, Keyboard, Mousewheel],
-  simulateTouch: true,
-  grabCursor: true,
-  spaceBetween: 0,
-  speed: 1000,
-  navigation: {
-    nextEl: '.about-swiper-button-next',
+  watchOverflow: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
   },
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-    },
+  spaceBetween: 1,
+ breakpoints: {
     375: {
-      slidesPerView: 2,
+     slidesPerView: 2,
     },
     768: {
       slidesPerView: 3,
@@ -31,12 +33,24 @@ new Swiper('.about-swiper', {
       slidesPerView: 6,
     },
   },
-  keyboard: {
-    enabled: true,
-  },
-  mousewheel: {
-    invert: true,
-  },
+});
+swiper.update();
+const firstEl = document.querySelector('.about-swiper-slide:first-child');
+
+firstEl.style.backgroundColor = 'rgb(237, 59, 68)';
+
+swiper.on('slideChangeTransitionStart', () => {
+  const currentIndex = swiper.activeIndex;
+
+  const previousSlide = swiper.slides[currentIndex - 1];
+
+  if (previousSlide) {
+    previousSlide.style.backgroundColor = 'initial';
+  }
+
+  const currentSlide = swiper.slides[currentIndex];
+
+  currentSlide.style.backgroundColor = 'rgb(237, 59, 68)';
 });
 
 new Accordion('.about-education', {

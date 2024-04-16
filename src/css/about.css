@@ -125,24 +125,65 @@
     color: #fafafa;
 }
 
-.about-swiper {
-    display: flex !important;
-    flex-direction: row !important;
-
+.about-me-swiper {
     margin-top: 32px;
-    margin-bottom: 64px;
 }
 
-.about-icon-right {
-    stroke: #fafafa;
-    width: 24px;
-    height: 24px;
+.list-item-about {
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
 }
 
-.swiper-button-nest-disabled {
-    stroke: #3b3b3b;
+.about-swiper-slide {
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 130px !important;
+    height: 130px !important;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    border-radius: 100%;
+    border: 1px solid rgba(250, 250, 250, 0.2)
 }
 
+.about-swiper-wrapper {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    width: 260px;
+    height: 130px;
+}
+
+.swiper-button-next {
+    width: 28px !important;
+    height: 28px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-color: transparent;
+    Stroke: #fafafa;
+
+}
+
+.about-swiper {
+    display: flex;
+    flex-direction: row;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    display: none;
+}
 
 /* =========about-mobile-style=========== */
 
@@ -172,11 +213,6 @@
         margin-bottom: 32px;
     }
 
-    .about-swiper {
-        margin-top: 64px;
-        margin-bottom: 96px;
-    }
-
     .about-skills {
         width: 600px;
     }
@@ -193,7 +229,18 @@
         letter-spacing: -0.02em;
         color: #fafafa;
     }
+
+    .about-me-swiper {
+        margin-top: 64px;
+    }
+
+    .swiper-slide-item {
+
+        width: 200px;
+        height: 200px;
+    }
 }
+
 
 /* =========about-tablet-style=========== */
 
@@ -230,15 +277,25 @@
         min-width: 612px;
     }
 
-    .about-swiper {
-        margin-top: 96px;
-        margin-bottom: 164px;
-    }
     .about-skills {
         width: 1200px;
 
     }
 
+    .swiper-button-next {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .about-swiper-slide {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .about-swiper-wrapper {
+        width: 1200px;
+        height: 200px;
+    }
 }
 
 /* =========about-desctop-style=========== */
