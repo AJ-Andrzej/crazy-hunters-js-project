@@ -175,7 +175,9 @@
     right: 5px;
     z-index: 100;
     background-color: transparent;
-    border: none
+    border: none;
+    color: #fafafa;
+    stroke: #fafafa !important;
 }
 
 .abouot-icon-next-button {
@@ -186,7 +188,7 @@
     align-items: center;
     border-color: transparent;
     fill: transparent;
-    stroke: #fafafa;
+    stroke: #fafafa !important;
 }
 
 .about-list-swiper {
