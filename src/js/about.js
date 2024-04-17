@@ -33,24 +33,24 @@ const swiper = new Swiper(aboutMeSwiperBox, {
     },
   },
 });
-swiper.update();
-const firstSlide = document.querySelector('.swiper-slide:first-child');
+// swiper.update();
+// const firstSlide = document.querySelector('.swiper-slide:first-child');
 
-firstSlide.style.backgroundColor = 'rgb(237, 59, 68)';
+// firstSlide.style.backgroundColor = 'rgb(237, 59, 68)';
 
-swiper.on('slideChangeTransitionStart', () => {
-  const currentIndex = swiper.activeIndex;
+// swiper.on('slideChangeTransitionStart', () => {
+//   const currentIndex = swiper.activeIndex;
 
-  const previousSlide = swiper.slides[currentIndex - 1];
+//   const previousSlide = swiper.slides[currentIndex - 1];
 
-  if (previousSlide) {
-    previousSlide.style.backgroundColor = 'initial';
-  }
+//   if (previousSlide) {
+//     previousSlide.style.backgroundColor = 'initial';
+//   }
 
-  const currentSlide = swiper.slides[currentIndex];
+//   const currentSlide = swiper.slides[currentIndex];
 
-  currentSlide.style.backgroundColor = 'rgb(237, 59, 68)';
-});
+//   currentSlide.style.backgroundColor = 'rgb(237, 59, 68)';
+// });
 
 new Accordion('.about-education', {
   duration: 600,
