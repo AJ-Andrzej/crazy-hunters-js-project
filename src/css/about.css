@@ -8,6 +8,7 @@
     margin-bottom: 32px;
 }
 
+
 .about-discription {
     border-radius: 24px;
     height: 500px;
@@ -130,59 +131,67 @@
 }
 
 .list-item-about {
-    box-sizing: border-box;
+
     margin: 0;
     overflow: hidden;
 }
 
-.about-swiper-slide {
-    display: flex !important;
-    justify-content: center !important;
-    text-align: center !important;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+.about-list-swiper>.swiper-slide {
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+
+.about-swipper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+
+.swiper-slide-item {
     margin: 0;
     padding: 0;
-    width: 130px !important;
-    height: 130px !important;
-    background-color: transparent;
-    font-weight: 500;
-    font-size: 20px;
-    letter-spacing: -0.02em;
-    color: #fafafa;
-    border-radius: 100%;
-    border: 1px solid rgba(250, 250, 250, 0.2)
-}
-
-.about-swiper-wrapper {
-    display: flex;
-    text-align: center;
-    flex-direction: row;
-    width: 260px;
-    height: 130px;
-}
-
-.swiper-button-next {
-    width: 28px !important;
-    height: 28px !important;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    white-space: nowrap;
+    box-sizing: border-box;
+    color: #fafafa;
+}
+
+.swipper-and-button-wraper {
+    margin-top: 32px;
+}
+
+.about-swiper-next-button {
+    position: absolute;
+    bottom: 50px;
+    right: 5px;
+    z-index: 10;
     background-color: transparent;
-    border-color: transparent;
-    Stroke: #fafafa;
-
+    border: none
 }
 
-.about-swiper {
+.abouot-icon-next-button {
+    width: 28px;
+    height: 28px;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-color: transparent;
+    fill: none;
+    stroke: #3b3b3b;
 }
 
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-    display: none;
+.about-list-swiper {
+    display: flex;
+    gap: 0;
 }
 
 /* =========about-mobile-style=========== */
@@ -239,6 +248,12 @@
         width: 200px;
         height: 200px;
     }
+
+    .about-swiper-next-button {
+        position: absolute;
+        bottom: 85px;
+        right: 1px;
+    }
 }
 
 
@@ -282,20 +297,15 @@
 
     }
 
-    .swiper-button-next {
-        width: 40px !important;
-        height: 40px !important;
+    .about-me-swiper {
+        margin-top: 96px;
     }
 
-    .about-swiper-slide {
-        width: 200px !important;
-        height: 200px !important;
-    }
-
-    .about-swiper-wrapper {
-        width: 1200px;
+    .swiper-slide-item {
+        width: 200px;
         height: 200px;
     }
+
 }
 
 /* =========about-desctop-style=========== */

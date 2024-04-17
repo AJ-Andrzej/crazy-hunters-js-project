@@ -4,12 +4,11 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 
-const aboutMeSwiperBox = document.querySelector('.about-swiper');
-const aboutMeNextButton = document.querySelector('.about-next-btn');
+const aboutMeSwiperBox = document.querySelector('.about-swipper');
+const aboutMeNextButton = document.querySelector('.about-swiper-next-button');
 
 const swiper = new Swiper(aboutMeSwiperBox, {
   modules: [Navigation, Keyboard],
-  preventInteractionOnTransition: true,
   navigation: {
     nextEl: aboutMeNextButton,
   },
@@ -21,10 +20,10 @@ const swiper = new Swiper(aboutMeSwiperBox, {
     onlyInViewport: true,
     pageUpDown: true,
   },
-  spaceBetween: 1,
- breakpoints: {
+  spaceBetween: 0,
+  breakpoints: {
     375: {
-     slidesPerView: 2,
+      slidesPerView: 2,
     },
     768: {
       slidesPerView: 3,
@@ -35,9 +34,9 @@ const swiper = new Swiper(aboutMeSwiperBox, {
   },
 });
 swiper.update();
-const firstEl = document.querySelector('.about-swiper-slide:first-child');
+const firstSlide = document.querySelector('.swiper-slide:first-child');
 
-firstEl.style.backgroundColor = 'rgb(237, 59, 68)';
+firstSlide.style.backgroundColor = 'rgb(237, 59, 68)';
 
 swiper.on('slideChangeTransitionStart', () => {
   const currentIndex = swiper.activeIndex;
